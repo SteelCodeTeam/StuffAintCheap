@@ -63,15 +63,15 @@ public  class StuffThatAintCheap {
         AQUA_AFINITY(GiveEnchantedBook(Enchantments.AQUA_AFFINITY, 1), 15, 1),
         DEPTH_STRIDER(GiveEnchantedBook(Enchantments.DEPTH_STRIDER, 3), 35, 2),
         FROST_WALKER(GiveEnchantedBook(Enchantments.FROST_WALKER, 2), 25, 2),
-        FIRE_ASPECT(GiveEnchantedBook(Enchantments.FIRE_ASPECT, 2), 25, 2),
-        LOOTING(GiveEnchantedBook(Enchantments.MOB_LOOTING, 3), 35, 3),
-        SWEEPING_EDGE(GiveEnchantedBook(Enchantments.SWEEPING_EDGE, 3), 35, 3),
-        FORTUNE(GiveEnchantedBook(Enchantments.BLOCK_FORTUNE, 3), 45, 3),
-        PUNCH(GiveEnchantedBook(Enchantments.PUNCH_ARROWS, 2), 45, 1),
-        FLAME(GiveEnchantedBook(Enchantments.FLAMING_ARROWS, 1), 25, 1),
-        LUCK_OF_THE_SEA(GiveEnchantedBook(Enchantments.FISHING_LUCK, 3), 45, 1),
-        LURE(GiveEnchantedBook(Enchantments.FISHING_SPEED, 4), 45, 3),
-        RIPTIDE(GiveEnchantedBook(Enchantments.RIPTIDE, 3), 45, 3);
+        FIRE_ASPECT(GiveEnchantedBook(Enchantments.FIRE_ASPECT, 2), 20, 2),
+        LOOTING(GiveEnchantedBook(Enchantments.MOB_LOOTING, 3), 40, 3),
+        SWEEPING_EDGE(GiveEnchantedBook(Enchantments.SWEEPING_EDGE, 3), 30, 3),
+        FORTUNE(GiveEnchantedBook(Enchantments.BLOCK_FORTUNE, 3), 35, 3),
+        PUNCH(GiveEnchantedBook(Enchantments.PUNCH_ARROWS, 2), 25, 1),
+        FLAME(GiveEnchantedBook(Enchantments.FLAMING_ARROWS, 1), 15, 1),
+        LUCK_OF_THE_SEA(GiveEnchantedBook(Enchantments.FISHING_LUCK, 3), 25, 1),
+        LURE(GiveEnchantedBook(Enchantments.FISHING_SPEED, 3), 25, 1),
+        RIPTIDE(GiveEnchantedBook(Enchantments.RIPTIDE, 3), 30, 2);
 
 
         private final ItemStack item;
@@ -107,7 +107,7 @@ public  class StuffThatAintCheap {
     }
 
     public enum EnchantedBooksListTier3 {
-        THORNS(GiveEnchantedBook(Enchantments.THORNS, 3), 50, 3),
+        THORNS(GiveEnchantedBook(Enchantments.THORNS, 3), 50, 2),
         BINDING_CURSE(GiveEnchantedBook(Enchantments.BINDING_CURSE, 1), 25, 1),
         SINLK_TOUCH(GiveEnchantedBook(Enchantments.SILK_TOUCH, 1), 45, 3),
         UNBREAKING(GiveEnchantedBook(Enchantments.UNBREAKING, 3), 40, 3),
@@ -149,11 +149,11 @@ public  class StuffThatAintCheap {
     }
 
     public enum EnchantedListBoots {
-        UNBREAKING_AND_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.ALL_DAMAGE_PROTECTION, 3), 25, 2),
-        UNBREAKING_AND_FIRE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2), 20, 2),
-        UNBREAKING_AND_PROYECTILE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2), 20, 2),
-        UNBREAKING_AND_DEPTH_STRIDER(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.DEPTH_STRIDER, 2), 20, 2),
-        UNBREAKING_AND_FALL_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FALL_PROTECTION, 2), 25, 2);
+        UNBREAKING_AND_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.ALL_DAMAGE_PROTECTION, 3), 17, 2),
+        UNBREAKING_AND_FIRE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2), 17, 2),
+        UNBREAKING_AND_PROYECTILE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2), 15, 2),
+        UNBREAKING_AND_DEPTH_STRIDER(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.DEPTH_STRIDER, 2), 14, 2),
+        UNBREAKING_AND_FALL_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FALL_PROTECTION, 2), 15, 2);
 
 
         private final ItemStack item;
@@ -190,11 +190,11 @@ public  class StuffThatAintCheap {
     }
 
     public enum EnchantedListLeggings {
-        UNBREAKING_AND_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.ALL_DAMAGE_PROTECTION, 3), 25, 5),
-        UNBREAKING_AND_FIRE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2), 20, 5),
-        UNBREAKING_AND_PROYECTILE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2), 20, 5),
-        UNBREAKING_AND_BLAST_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLAST_PROTECTION, 2), 20, 5),
-        UNBREAKING_AND_THORNS(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.THORNS, 2), 25, 5);
+        UNBREAKING_AND_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.ALL_DAMAGE_PROTECTION, 3), 21, 5),
+        UNBREAKING_AND_FIRE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2), 21, 5),
+        UNBREAKING_AND_PROYECTILE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2), 18, 5),
+        UNBREAKING_AND_BLAST_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLAST_PROTECTION, 2), 19, 5),
+        UNBREAKING_AND_THORNS(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.THORNS, 2), 22, 5);
 
 
         private final ItemStack item;
@@ -231,11 +231,11 @@ public  class StuffThatAintCheap {
     }
 
     public enum EnchantedListHelmet {
-        UNBREAKING_AND_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.ALL_DAMAGE_PROTECTION, 3), 25, 3),
-        UNBREAKING_AND_FIRE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2), 20, 3),
-        UNBREAKING_AND_PROYECTILE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2), 20, 3),
-        UNBREAKING_AND_RESPIRATION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.RESPIRATION, 2), 20, 3),
-        UNBREAKING_AND_AQUA_AFINITY(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.AQUA_AFFINITY, 1), 25, 3);
+        UNBREAKING_AND_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.ALL_DAMAGE_PROTECTION, 3), 18, 3),
+        UNBREAKING_AND_FIRE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2), 18, 3),
+        UNBREAKING_AND_PROYECTILE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2), 16, 3),
+        UNBREAKING_AND_RESPIRATION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.RESPIRATION, 2), 15, 3),
+        UNBREAKING_AND_AQUA_AFINITY(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.AQUA_AFFINITY, 1), 13, 3);
 
 
         private final ItemStack item;
@@ -275,7 +275,7 @@ public  class StuffThatAintCheap {
         UNBREAKING_AND_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.ALL_DAMAGE_PROTECTION, 3), 25, 6),
         UNBREAKING_AND_FIRE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2), 20, 6),
         UNBREAKING_AND_PROYECTILE_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2), 20, 6),
-        UNBREAKING_AND_BLAST_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLAST_PROTECTION, 2), 20, 6),
+        UNBREAKING_AND_BLAST_PROTECTION(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLAST_PROTECTION, 2), 24, 6),
         UNBREAKING_AND_THORNS(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.THORNS, 2), 25, 6);
 
 
@@ -347,9 +347,9 @@ public  class StuffThatAintCheap {
             }
             }
         public enum EnchantedListShovel {
-            UNBREAKING_AND_EFFICIENCY(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLOCK_EFFICIENCY, 3), 20, 1),
-            UNBREAKING_AND_FORTUNE(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLOCK_FORTUNE, 2), 24, 1),
-            FORTUNE_AND_EFFICIENCY(GiveEnchantedItem(Enchantments.BLOCK_FORTUNE, 2, Enchantments.BLOCK_EFFICIENCY, 3), 26, 1);
+            UNBREAKING_AND_EFFICIENCY(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLOCK_EFFICIENCY, 3), 18, 1),
+            UNBREAKING_AND_FORTUNE(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLOCK_FORTUNE, 2), 20, 1),
+            FORTUNE_AND_EFFICIENCY(GiveEnchantedItem(Enchantments.BLOCK_FORTUNE, 2, Enchantments.BLOCK_EFFICIENCY, 3), 22, 1);
 
 
             private final ItemStack item;
@@ -383,9 +383,9 @@ public  class StuffThatAintCheap {
             }
         }
         public enum EnchantedListAxe {
-            UNBREAKING_AND_EFFICIENCY(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLOCK_EFFICIENCY, 3), 20, 2),
-            UNBREAKING_AND_FORTUNE(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLOCK_FORTUNE, 2), 24, 2),
-            FORTUNE_AND_EFFICIENCY(GiveEnchantedItem(Enchantments.BLOCK_FORTUNE, 2, Enchantments.BLOCK_EFFICIENCY, 3), 26, 2);
+            UNBREAKING_AND_EFFICIENCY(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLOCK_EFFICIENCY, 3), 19, 2),
+            UNBREAKING_AND_FORTUNE(GiveEnchantedItem(Enchantments.UNBREAKING, 2, Enchantments.BLOCK_FORTUNE, 2), 21, 2),
+            FORTUNE_AND_EFFICIENCY(GiveEnchantedItem(Enchantments.BLOCK_FORTUNE, 2, Enchantments.BLOCK_EFFICIENCY, 3), 24, 2);
 
 
 
