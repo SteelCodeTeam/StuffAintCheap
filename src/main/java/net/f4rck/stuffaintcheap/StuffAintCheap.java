@@ -1,6 +1,7 @@
 package net.f4rck.stuffaintcheap;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.entity.npc.Villager;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
