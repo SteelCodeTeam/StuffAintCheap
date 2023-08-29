@@ -1,8 +1,10 @@
 package net.f4rck.stuffaintcheap.enums;
 
+import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
 public  class BookTradesEnum {
 
@@ -34,9 +36,7 @@ public  class BookTradesEnum {
         }
 
         private static ItemStack GiveEnchantedBook(Enchantment enchantments, int level) {
-            ItemStack itemStack = new ItemStack(Items.ENCHANTED_BOOK, 1);
-            itemStack.enchant(enchantments, level);
-            return itemStack;
+            return EnchantedBookItem.createForEnchantment(new EnchantmentInstance(enchantments, level));
         }
 
         public ItemStack getItem() {
@@ -83,9 +83,7 @@ public  class BookTradesEnum {
         }
 
         private static ItemStack GiveEnchantedBook(Enchantment enchantments, int level) {
-            ItemStack itemStack = new ItemStack(Items.ENCHANTED_BOOK, 1);
-            itemStack.enchant(enchantments, level);
-            return itemStack;
+            return EnchantedBookItem.createForEnchantment(new EnchantmentInstance(enchantments, level));
         }
 
         public ItemStack getItem() {
@@ -125,9 +123,7 @@ public  class BookTradesEnum {
         }
 
         private static ItemStack GiveEnchantedBook(Enchantment enchantments, int level) {
-            ItemStack itemStack = new ItemStack(Items.ENCHANTED_BOOK, 1);
-            itemStack.enchant(enchantments, level);
-            return itemStack;
+            return EnchantedBookItem.createForEnchantment(new EnchantmentInstance(enchantments, level));
         }
 
         public ItemStack getItem() {
