@@ -1,8 +1,8 @@
-# StuffAintCheap-1.20.1-1.0.0
-
+# StuffAintCheap-1.19.2-1.0.1
 
 ## **I Stuff Ain´t Cheap! ✨📘**
 
+*Thanks mxruben for your hotfix :)*
 
 
 *Villagers no longer make diamond items out of thin air.*
