@@ -23,21 +23,16 @@ public class StuffAintCheap {
     public StuffAintCheap() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::commonSetup);
 
 
         MinecraftForge.EVENT_BUS.register(this);
 
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-
-    }
-
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
+            LOGGER.info("Starting Stuff Ain't Cheap mod.");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
