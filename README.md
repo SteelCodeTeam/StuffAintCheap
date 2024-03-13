@@ -1,4 +1,4 @@
-# StuffAintCheap-1.20.1-1.0.1
+# StuffAintCheap-1.20.1-1.1.0
 
 
 ## **I Stuff Ain´t Cheap! ✨📘**
@@ -16,6 +16,12 @@ Librarian first trade pool no longer contains Enchanted Books.
 Librarians now ask for Diamonds instead of one book for Enchanted Books.
 <br>
 Librarians no longer sells low level Enchanments, also they sells better Enchantments the higher their level.
+
+## **Changes version 1.1.0**
+
+- *Added compatibility with other mod trades*
+
+
 ------
 ## **Requirements 📦**
 

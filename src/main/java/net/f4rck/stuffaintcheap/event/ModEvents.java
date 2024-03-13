@@ -14,7 +14,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraft.world.item.ItemStack;
 
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Mod.EventBusSubscriber(modid = StuffAintCheap.MOD_ID)
 public class ModEvents {
@@ -24,12 +26,20 @@ public class ModEvents {
         /**
          * LIBRARIAN
          */
+
+        Map<VillagerProfession, Int2ObjectMap<VillagerTrades.ItemListing[]>> vanillatradeslist = VillagerTrades.TRADES;
+        Int2ObjectMap<VillagerTrades.ItemListing[]> vanillatrades ;
+
+
         if (event.getType() == VillagerProfession.LIBRARIAN) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            vanillatrades = vanillatradeslist.get(VillagerProfession.LIBRARIAN);
 
             //level 1 clear -----------------------------------------------------------------------
             int villagerLevel = 1;
-            trades.get(villagerLevel).clear();
+
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
+
             //level 1 trades ----------------------------------------------------------------------
             for (ItemsTradesEnum.ItemsTier1 itemsTrades : ItemsTradesEnum.ItemsTier1.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -41,7 +51,7 @@ public class ModEvents {
             }
             //level 2 clear -----------------------------------------------------------------------
             villagerLevel = 2;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 2 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedBooksListTier2 element : BookTradesEnum.EnchantedBooksListTier2.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -51,7 +61,7 @@ public class ModEvents {
             }
             //level 3 clear -----------------------------------------------------------------------
             villagerLevel = 3;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 3 trades ----------------------------------------------------------------------
             for (ItemsTradesEnum.ItemsTier3 itemsTrades : ItemsTradesEnum.ItemsTier3.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -63,7 +73,7 @@ public class ModEvents {
             }
             //level 4 clear -----------------------------------------------------------------------
             villagerLevel = 4;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 4 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedBooksListTier4 element : BookTradesEnum.EnchantedBooksListTier4.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -73,7 +83,7 @@ public class ModEvents {
             }
             //level 5 clear -----------------------------------------------------------------------
             villagerLevel = 5;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 5 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedBooksListTier5 element : BookTradesEnum.EnchantedBooksListTier5.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -88,10 +98,11 @@ public class ModEvents {
          */
         if (event.getType() == VillagerProfession.ARMORER) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            vanillatrades = vanillatradeslist.get(VillagerProfession.ARMORER);
 
             //level 4 clear -----------------------------------------------------------------------
             int villagerLevel = 4;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 4 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedListBoots element : BookTradesEnum.EnchantedListBoots.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -109,7 +120,7 @@ public class ModEvents {
             }
             //level 5 clear -----------------------------------------------------------------------
             villagerLevel = 5;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 5 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedListHelmet element : BookTradesEnum.EnchantedListHelmet.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -130,10 +141,11 @@ public class ModEvents {
          */
         if (event.getType() == VillagerProfession.TOOLSMITH) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            vanillatrades = vanillatradeslist.get(VillagerProfession.TOOLSMITH);
 
             //level 4 clear -----------------------------------------------------------------------
             int villagerLevel = 4;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 4 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedListShovel element : BookTradesEnum.EnchantedListShovel.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -150,7 +162,7 @@ public class ModEvents {
             }
             //level 5 clear -----------------------------------------------------------------------
             villagerLevel = 5;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 5 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedListPickaxe element : BookTradesEnum.EnchantedListPickaxe.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -165,6 +177,7 @@ public class ModEvents {
          */
         if (event.getType() == VillagerProfession.WEAPONSMITH) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            vanillatrades = vanillatradeslist.get(VillagerProfession.WEAPONSMITH);
 
             int villagerLevel = 3;
             //level 3 trades ----------------------------------------------------------------------
@@ -173,7 +186,7 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 1), 3, 25, 0.4f));
             //level 4 clear -----------------------------------------------------------------------
             villagerLevel = 4;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 4 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedListCaxe element : BookTradesEnum.EnchantedListCaxe.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -183,7 +196,7 @@ public class ModEvents {
             }
             //level 5 clear -----------------------------------------------------------------------
             villagerLevel = 5;
-            trades.get(villagerLevel).clear();
+            trades.get(villagerLevel).removeIf(vanillatrades::containsValue);
             //level 5 trades ----------------------------------------------------------------------
             for (BookTradesEnum.EnchantedListSword element : BookTradesEnum.EnchantedListSword.values()) {
                 trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
