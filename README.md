@@ -1,4 +1,4 @@
-# StuffAintCheap-1.20.1-1.1.0
+# StuffAintCheap-1.20.1-1.2.0
 
 
 ## **I Stuff Ain´t Cheap! ✨📘**
@@ -6,20 +6,19 @@
 *Thanks mxruben for your hotfix :)*
 
 
-*Villagers no longer make diamond items out of thin air.*
-<br>
-<br>
-Armorer, Toolsmith and Weaponsmith villagers now also ask for diamonds in exchange for diamond equipment, but it still is cheaper that crafting.
-<br>
-Librarian first trade pool no longer contains Enchanted Books.
-<br>
-Librarians now ask for Diamonds instead of one book for Enchanted Books.
-<br>
-Librarians no longer sells low level Enchanments, also they sells better Enchantments the higher their level.
+**Villagers no longer make diamond items out of thin air.**
 
-## **Changes version 1.1.0**
+- Armorer, Toolsmith and Weaponsmith villagers now also ask for diamonds in exchange for diamond equipment, but it still is cheaper that crafting.
 
-- *Added compatibility with other mod trades*
+- Librarian first trade pool no longer contains Enchanted Books.
+
+- Librarians now ask for Diamonds instead of one book for Enchanted Books.
+
+- Librarians no longer sells low level enchanments, also they sells better enchantments the higher their level.
+
+## **Changelog: 1.2.0**
+
+- *Update to last version of minecraft*
 
 
 ------
