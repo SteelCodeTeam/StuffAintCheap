@@ -18,7 +18,7 @@
 
 ## **Changelog: 1.2.0**
 
-- *Update to minecraft 1.20.x*
+- *Update to minecraft 1.21.x*
 - *Update gradle to 8.x version*
 
 ------

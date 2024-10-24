@@ -20,12 +20,14 @@ public class StuffAintCheap {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public StuffAintCheap(IEventBus modEventBus) {
+        LOGGER.info("Starting Stuff Ain't Cheap mod.");
         NeoForge.EVENT_BUS.register(this);
+        LOGGER.info("Registering Event");
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("Starting Stuff Ain't Cheap mod.");
+        LOGGER.info("Starting Stuff Ain't Cheap mod for server.");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -33,7 +35,7 @@ public class StuffAintCheap {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            LOGGER.info("Starting Stuff Ain't Cheap mod for client.");
         }
     }
 

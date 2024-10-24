@@ -33,8 +33,6 @@ import java.util.Optional;
 @EventBusSubscriber(modid = StuffAintCheap.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvents {
 
-
-
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
         /**
