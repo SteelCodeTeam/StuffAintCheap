@@ -18,13 +18,13 @@
 
 ## **Changelog: 1.2.0**
 
-- *Update to last version of minecraft*
-
+- *Update to minecraft 1.20.x*
+- *Update gradle to 8.x version*
 
 ------
 ## **Requirements 📦**
 
-- **Forge 1.20.1 - 47.1.43**
+- **NeoForge 21.0.0**
 
 ------
 ## **About us 🙋**
