@@ -1,5 +1,6 @@
 package net.f4rck.stuffaintcheap.enums.books;
 
+import net.f4rck.stuffaintcheap.enums.EnchantedBookEnum;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
@@ -7,7 +8,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
 
-public enum BookTier5Enum {
+public enum BookTier5Enum implements EnchantedBookEnum {
     THORNS(Enchantments.THORNS, 3, 50, 2),
     BINDING_CURSE(Enchantments.BINDING_CURSE, 1, 25, 1),
     SILK_TOUCH(Enchantments.SILK_TOUCH, 1, 45, 3),

@@ -1,12 +1,13 @@
 package net.f4rck.stuffaintcheap.enums.armor;
 
+import net.f4rck.stuffaintcheap.enums.EnchantedItemEnum;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 
-public enum EnchantedBootsEnum {
+public enum EnchantedBootsEnum implements EnchantedItemEnum {
     UNBREAKING_AND_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.PROTECTION, 3, 17, 2),
     UNBREAKING_AND_FIRE_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2, 17, 2),
     UNBREAKING_AND_PROYECTILE_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2, 15, 2),

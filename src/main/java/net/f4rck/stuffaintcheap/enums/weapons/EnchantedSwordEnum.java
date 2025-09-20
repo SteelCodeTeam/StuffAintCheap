@@ -1,5 +1,6 @@
 package net.f4rck.stuffaintcheap.enums.weapons;
 
+import net.f4rck.stuffaintcheap.enums.EnchantedItemEnum;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -7,7 +8,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 
 
-public enum EnchantedSwordEnum {
+public enum EnchantedSwordEnum implements EnchantedItemEnum {
     UNBREAKING_AND_SHARPNESS(Enchantments.UNBREAKING, 2, Enchantments.SHARPNESS, 3, 27, 1),
     UNBREAKING_AND_LOOTING(Enchantments.UNBREAKING, 2, Enchantments.LOOTING, 2, 21, 1),
     LOOTING_AND_SHARPNESS(Enchantments.LOOTING, 2, Enchantments.SHARPNESS, 3, 28, 1),

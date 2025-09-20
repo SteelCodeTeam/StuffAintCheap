@@ -1,57 +1,266 @@
-[24oct2024 10:35:36.520] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.0.167, --assetIndex, asset-index, --assetsDir, C:\Users\jdazh\.gradle\caches\minecraft\assets\1.21, --gameDir, ., --fml.neoForgeVersion, 21.0.167, --fml.fmlVersion, 4.0.23, --fml.mcVersion, 1.21, --fml.neoFormVersion, 20240613.152323]
-[24oct2024 10:35:36.523] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.5+11-LTS
-[24oct2024 10:35:36.524] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.5 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
-[24oct2024 10:35:36.657] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[24oct2024 10:35:36.750] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[24oct2024 10:35:36.853] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[24oct2024 10:35:36.994] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.6 Source=union:/C:/Users/jdazh/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.14.0+mixin.0.8.6/c265173c84346e9e5d42a2384b2b02bd39a4a899/sponge-mixin-0.14.0+mixin.0.8.6.jar%23135!/ Service=ModLauncher Env=CLIENT
-[24oct2024 10:35:37.231] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([C:\Users\jdazh\IdeaProjects\StuffAintCheap\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
-[24oct2024 10:35:37.235] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon RX 6750 XT GL version 4.6.0 Core Profile Context 24.3.1.240312, ATI Technologies Inc.
-[24oct2024 10:35:37.252] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([C:\Users\jdazh\IdeaProjects\StuffAintCheap\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
-[24oct2024 10:35:37.267] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
-[24oct2024 10:35:37.279] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: userdev mods and services, reader: mod manifest]
-[24oct2024 10:35:37.312] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "mixinextras-neoforge-0.3.5.jar" [locator: userdev mods and services, reader: mod manifest]
-[24oct2024 10:35:37.501] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-neoforge-0.3.5.jar. Using Mod File: C:\Users\jdazh\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.3.5\ef3ffcf309dae656517b2f120189b1c9b21737dd\mixinextras-neoforge-0.3.5.jar
-[24oct2024 10:35:37.502] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[24oct2024 10:35:37.685] [main/INFO] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Loading coremod script-engine for [neoforge]
-[24oct2024 10:35:38.434] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.0.167, --gameDir, ., --assetsDir, C:\Users\jdazh\.gradle\caches\minecraft\assets\1.21, --assetIndex, asset-index]
-[24oct2024 10:35:39.919] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 412 milliseconds
-[24oct2024 10:35:40.029] [pool-7-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
-[24oct2024 10:35:44.409] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[24oct2024 10:35:44.410] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[24oct2024 10:35:44.413] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[24oct2024 10:35:44.414] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[24oct2024 10:35:44.415] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[24oct2024 10:35:44.516] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/jdazh/IdeaProjects/StuffAintCheap/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/assets/.mcassetsroot' uses unexpected schema
-[24oct2024 10:35:44.516] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/jdazh/IdeaProjects/StuffAintCheap/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/data/.mcassetsroot' uses unexpected schema
-[24oct2024 10:35:44.539] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[24oct2024 10:35:44.547] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[24oct2024 10:35:44.628] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[24oct2024 10:35:44.840] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.0.167, for MC 1.21
-[24oct2024 10:35:45.443] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: []
-[24oct2024 10:35:45.546] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/stuff_aint_cheap, mod/neoforge
-[24oct2024 10:35:45.614] [Worker-Main-7/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[24oct2024 10:35:45.725] [Worker-Main-9/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[24oct2024 10:35:46.752] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[24oct2024 10:35:46.770] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Shutdown failure!
-java.util.ConcurrentModificationException: null
-	at java.base/java.util.HashMap.forEach(HashMap.java:1432) ~[?:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.texture.TextureManager.close(TextureManager.java:167) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.Minecraft.close(Minecraft.java:1128) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.Minecraft.destroy(Minecraft.java:1100) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.main.Main.main(Main.java:236) ~[neoforge-21.0.167.jar%23189!/:?]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.23.jar%23143!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.23.jar%23143!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.loading.targets.NeoForgeClientUserdevLaunchHandler.runService(NeoForgeClientUserdevLaunchHandler.java:23) ~[loader-4.0.23.jar%23143!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.23.jar%23143!/:4.0]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.4.jar%23125!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.4.jar%23125!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.4.jar%23125!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.4.jar%23125!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.4.jar%23125!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.4.jar%23125!/:?]
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.4.jar%23125!/:?]
-	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?]
-	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?]
+[20sept2025 21:09:05.177] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.0.167, --assetIndex, asset-index, --assetsDir, C:\Users\sctst\.gradle\caches\minecraft\assets\1.21, --gameDir, ., --fml.neoForgeVersion, 21.0.167, --fml.fmlVersion, 4.0.23, --fml.mcVersion, 1.21, --fml.neoFormVersion, 20240613.152323]
+[20sept2025 21:09:05.182] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.7+6-LTS
+[20sept2025 21:09:05.184] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.7 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[20sept2025 21:09:05.338] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[20sept2025 21:09:05.418] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[20sept2025 21:09:05.536] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[20sept2025 21:09:05.609] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.6 Source=union:/C:/Users/sctst/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.14.0+mixin.0.8.6/c265173c84346e9e5d42a2384b2b02bd39a4a899/sponge-mixin-0.14.0+mixin.0.8.6.jar%23135!/ Service=ModLauncher Env=CLIENT
+[20sept2025 21:09:05.784] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([C:\Users\sctst\Desktop\CNT\appointment-management-ops\projects\StuffAintCheap\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
+[20sept2025 21:09:05.792] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon RX 6750 XT GL version 4.6.0 Core Profile Context 25.9.1.250822, ATI Technologies Inc.
+[20sept2025 21:09:05.797] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([C:\Users\sctst\Desktop\CNT\appointment-management-ops\projects\StuffAintCheap\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
+[20sept2025 21:09:05.810] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
+[20sept2025 21:09:05.818] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: userdev mods and services, reader: mod manifest]
+[20sept2025 21:09:05.835] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "mixinextras-neoforge-0.3.5.jar" [locator: userdev mods and services, reader: mod manifest]
+[20sept2025 21:09:06.068] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-neoforge-0.3.5.jar. Using Mod File: C:\Users\sctst\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.3.5\ef3ffcf309dae656517b2f120189b1c9b21737dd\mixinextras-neoforge-0.3.5.jar
+[20sept2025 21:09:06.068] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[20sept2025 21:09:06.301] [main/INFO] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Loading coremod script-engine for [neoforge]
+[20sept2025 21:09:07.280] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.0.167, --gameDir, ., --assetsDir, C:\Users\sctst\.gradle\caches\minecraft\assets\1.21, --assetIndex, asset-index]
+[20sept2025 21:09:08.642] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 280 milliseconds
+[20sept2025 21:09:08.798] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[20sept2025 21:09:08.822] [pool-7-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[20sept2025 21:09:13.059] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20sept2025 21:09:13.059] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20sept2025 21:09:13.062] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[20sept2025 21:09:13.063] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[20sept2025 21:09:13.063] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20sept2025 21:09:13.155] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/sctst/Desktop/CNT/appointment-management-ops/projects/StuffAintCheap/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[20sept2025 21:09:13.155] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/sctst/Desktop/CNT/appointment-management-ops/projects/StuffAintCheap/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[20sept2025 21:09:13.188] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[20sept2025 21:09:13.193] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[20sept2025 21:09:13.269] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[20sept2025 21:09:13.528] [modloading-worker-0/INFO] [net.f4rck.stuffaintcheap.StuffAintCheap/]: Starting Stuff Ain't Cheap mod.
+[20sept2025 21:09:13.538] [modloading-worker-0/INFO] [net.f4rck.stuffaintcheap.StuffAintCheap/]: Registering Event
+[20sept2025 21:09:13.550] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.0.167, for MC 1.21
+[20sept2025 21:09:14.023] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: []
+[20sept2025 21:09:14.102] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/stuff_aint_cheap, mod/neoforge
+[20sept2025 21:09:14.229] [Worker-Main-13/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[20sept2025 21:09:14.264] [Worker-Main-15/INFO] [net.f4rck.stuffaintcheap.StuffAintCheap/]: Starting Stuff Ain't Cheap mod for client.
+[20sept2025 21:09:14.279] [Worker-Main-9/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[20sept2025 21:09:15.383] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[20sept2025 21:09:15.383] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[20sept2025 21:09:15.410] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Altavoces (Focusrite USB Audio)
+[20sept2025 21:09:15.411] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[20sept2025 21:09:15.489] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[20sept2025 21:09:15.496] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[20sept2025 21:09:15.496] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[20sept2025 21:09:15.497] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[20sept2025 21:09:15.497] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[20sept2025 21:09:15.503] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[20sept2025 21:09:15.504] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[20sept2025 21:09:15.505] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[20sept2025 21:09:15.505] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[20sept2025 21:09:15.698] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[20sept2025 21:09:15.699] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[20sept2025 21:09:15.700] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[20sept2025 21:09:15.700] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[20sept2025 21:09:15.700] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[20sept2025 21:09:15.725] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[20sept2025 21:10:00.164] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1290 recipes
+[20sept2025 21:10:00.309] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1399 advancements
+[20sept2025 21:10:00.545] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: Starting ARMORER trades modification process...
+[20sept2025 21:10:00.545] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: Processing Level 4 trades...
+[20sept2025 21:10:00.546] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 2 vanilla trades from level 4
+[20sept2025 21:10:00.549] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: Added 10 enchanted armor trades to Level 4 (5 boots, 5 leggings)
+[20sept2025 21:10:00.549] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: Processing Level 5 trades...
+[20sept2025 21:10:00.549] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 2 vanilla trades from level 5
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: Added 10 enchanted armor trades to Level 5 (5 helmets, 5 chestplates)
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: === ARMORER TRADES MODIFICATION COMPLETED ===
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: Total custom trades added: 20
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]:   - Level 4: 10 armor pieces (boots & leggings)
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]:   - Level 5: 10 armor pieces (helmets & chestplates)
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: Vanilla trades cleared for levels 4 and 5
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ArmorerEvents/]: ==============================================
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Starting LIBRARIAN trades modification process...
+[20sept2025 21:10:00.551] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Processing Level 1 trades...
+[20sept2025 21:10:00.552] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 3 vanilla trades from level 1
+[20sept2025 21:10:00.552] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Added 6 simple item trades to Level 1
+[20sept2025 21:10:00.552] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Processing Level 2 trades...
+[20sept2025 21:10:00.552] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 3 vanilla trades from level 2
+[20sept2025 21:10:00.553] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Added 15 enchanted book trades to Level 2
+[20sept2025 21:10:00.554] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Processing Level 3 trades...
+[20sept2025 21:10:00.554] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 3 vanilla trades from level 3
+[20sept2025 21:10:00.554] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Added 4 simple item trades to Level 3
+[20sept2025 21:10:00.554] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Processing Level 4 trades...
+[20sept2025 21:10:00.554] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 4 vanilla trades from level 4
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Added 14 enchanted book trades to Level 4
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Processing Level 5 trades...
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 1 vanilla trades from level 5
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Added 7 enchanted book trades to Level 5
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: === LIBRARIAN TRADES MODIFICATION COMPLETED ===
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Total custom trades added: 46
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]:   - Simple items: 10 trades (levels 1 & 3)
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]:   - Enchanted books: 36 trades (levels 2, 4 & 5)
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: Vanilla trades cleared for all levels (1-5)
+[20sept2025 21:10:00.555] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.LibrarianEvents/]: ===============================================
+[20sept2025 21:10:00.556] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: Starting TOOLSMITH trades modification process...
+[20sept2025 21:10:00.556] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: Processing Level 4 trades...
+[20sept2025 21:10:00.556] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 3 vanilla trades from level 4
+[20sept2025 21:10:00.556] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: Added 6 enchanted tool trades to Level 4 (3 shovels, 3 axes)
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: Processing Level 5 trades...
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 1 vanilla trades from level 5
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: Added 3 enchanted diamond pickaxe trades to Level 5
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: === TOOLSMITH TRADES MODIFICATION COMPLETED ===
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: Total custom trades added: 9
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]:   - Level 4: 6 tools (shovels & axes)
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]:   - Level 5: 3 pickaxes
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: Vanilla trades cleared for levels 4 and 5
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.ToolSmithEvents/]: ============================================
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: Starting WEAPONSMITH trades modification process...
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: Processing Level 3 trades...
+[20sept2025 21:10:00.557] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 1 vanilla trades from level 3
+[20sept2025 21:10:00.558] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: Added 1 custom trade to Level 3: Diamond -> Emerald
+[20sept2025 21:10:00.558] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: Processing Level 4 trades...
+[20sept2025 21:10:00.558] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 2 vanilla trades from level 4
+[20sept2025 21:10:00.558] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: Added 7 enchanted diamond axe trades to Level 4
+[20sept2025 21:10:00.558] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: Processing Level 5 trades...
+[20sept2025 21:10:00.558] [Render thread/INFO] [net.f4rck.stuffaintcheap.utils.TradeUtils/]: Removed 1 vanilla trades from level 5
+[20sept2025 21:10:00.558] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: Added 7 enchanted diamond sword trades to Level 5
+[20sept2025 21:10:00.559] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: === WEAPONSMITH TRADES MODIFICATION COMPLETED ===
+[20sept2025 21:10:00.559] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: Total custom trades added: 15
+[20sept2025 21:10:00.559] [Render thread/INFO] [net.f4rck.stuffaintcheap.event.WeaponSmithEvents/]: ================================================
+[20sept2025 21:10:19.565] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21
+[20sept2025 21:10:19.566] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[20sept2025 21:10:21.415] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[20sept2025 21:10:21.458] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[20sept2025 21:10:21.926] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[20sept2025 21:10:22.430] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 18%
+[20sept2025 21:10:22.953] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 20%
+[20sept2025 21:10:23.425] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 51%
+[20sept2025 21:10:23.590] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 2171 ms
+[20sept2025 21:10:23.593] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[20sept2025 21:10:23.593] [Server thread/INFO] [net.f4rck.stuffaintcheap.StuffAintCheap/]: Starting Stuff Ain't Cheap mod for server.
+[20sept2025 21:10:23.627] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[20sept2025 21:10:23.627] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[20sept2025 21:10:24.548] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:cc01f9f9] logged in with entity id 21 at (4.5, 84.0, -2.5)
+[20sept2025 21:10:24.626] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[20sept2025 21:10:24.782] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2 advancements
+[20sept2025 21:10:33.296] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[20sept2025 21:10:33.313] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20sept2025 21:10:33.326] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20sept2025 21:10:33.331] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20sept2025 21:11:19.152] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Unknown or incomplete command, see below for error
+[20sept2025 21:11:19.156] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] ...328 63 196<--[HERE]
+[20sept2025 21:11:23.495] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Unknown or incomplete command, see below for error
+[20sept2025 21:11:23.495] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] ...329 63 199<--[HERE]
+[20sept2025 21:11:35.766] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Too many blocks in the specified area (maximum 32768, specified 187440)
+[20sept2025 21:11:48.619] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Too many blocks in the specified area (maximum 32768, specified 105600)
+[20sept2025 21:11:58.433] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Successfully filled 7877 block(s)]
+[20sept2025 21:11:58.439] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Successfully filled 7877 block(s)
+[20sept2025 21:12:19.921] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 9 advancements
+[20sept2025 21:13:49.755] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 13 advancements
+[20sept2025 21:14:09.506] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 27 advancements
+[20sept2025 21:18:10.158] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 28 advancements
+[20sept2025 21:18:16.745] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [What a Deal!]
+[20sept2025 21:18:16.752] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [What a Deal!]
+[20sept2025 21:18:16.765] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 32 advancements
+[20sept2025 21:18:28.259] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 36 advancements
+[20sept2025 21:18:49.565] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 38 advancements
+[20sept2025 21:19:15.908] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 40 advancements
+[20sept2025 21:19:36.954] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Diamonds!]
+[20sept2025 21:19:36.969] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Diamonds!]
+[20sept2025 21:19:37.020] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 59 advancements
+[20sept2025 21:20:34.667] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 77 advancements
+[20sept2025 21:20:46.713] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 78 advancements
+[20sept2025 21:25:46.360] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 80 advancements
+[20sept2025 21:25:58.491] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Monster Hunter]
+[20sept2025 21:25:58.498] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Monster Hunter]
+[20sept2025 21:25:58.507] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 115 advancements
+[20sept2025 21:27:04.328] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Acquire Hardware]
+[20sept2025 21:27:04.336] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Acquire Hardware]
+[20sept2025 21:27:04.362] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 143 advancements
+[20sept2025 21:27:39.859] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 144 advancements
+[20sept2025 21:33:09.356] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7802, l='ServerLevel[New World]', x=286.30, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:09.363] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7802, l='ClientLevel', x=286.30, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:33:11.791] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7793, l='ServerLevel[New World]', x=288.64, y=63.00, z=147.32] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:11.799] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7793, l='ClientLevel', x=288.64, y=63.00, z=147.32] died, message: 'Weaponsmith died'
+[20sept2025 21:33:14.103] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7790, l='ServerLevel[New World]', x=290.70, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:14.111] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7790, l='ClientLevel', x=290.70, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:33:16.088] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7787, l='ServerLevel[New World]', x=292.70, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:16.104] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7787, l='ClientLevel', x=292.70, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:33:18.589] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7785, l='ServerLevel[New World]', x=294.65, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:18.607] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7785, l='ClientLevel', x=294.65, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:33:29.755] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7779, l='ServerLevel[New World]', x=296.60, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:29.758] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7779, l='ClientLevel', x=296.60, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:33:33.290] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7777, l='ServerLevel[New World]', x=298.57, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:33.305] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7777, l='ClientLevel', x=298.57, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:33:55.454] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7764, l='ServerLevel[New World]', x=300.35, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:55.463] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7764, l='ClientLevel', x=300.35, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:33:57.390] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7762, l='ServerLevel[New World]', x=302.58, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:57.399] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7762, l='ClientLevel', x=302.58, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:33:59.254] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7744, l='ServerLevel[New World]', x=304.61, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:33:59.263] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7744, l='ClientLevel', x=304.61, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:34:01.803] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7738, l='ServerLevel[New World]', x=306.70, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:34:01.821] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7738, l='ClientLevel', x=306.70, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:34:03.740] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7734, l='ServerLevel[New World]', x=308.57, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:34:03.748] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7734, l='ClientLevel', x=308.57, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:34:05.942] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7728, l='ServerLevel[New World]', x=310.55, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:34:05.951] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7728, l='ClientLevel', x=310.55, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:34:08.244] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7724, l='ServerLevel[New World]', x=312.59, y=63.00, z=147.30] died, message: 'Weaponsmith was slain by Dev'
+[20sept2025 21:34:08.260] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Weaponsmith'/7724, l='ClientLevel', x=312.59, y=63.00, z=147.30] died, message: 'Weaponsmith died'
+[20sept2025 21:35:02.197] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[20sept2025 21:35:02.208] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20sept2025 21:35:02.220] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20sept2025 21:35:02.226] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20sept2025 21:37:09.904] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Getting an Upgrade]
+[20sept2025 21:37:09.911] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Getting an Upgrade]
+[20sept2025 21:37:09.962] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 145 advancements
+[20sept2025 21:38:28.065] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 148 advancements
+[20sept2025 21:41:59.505] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Isn't It Iron Pick]
+[20sept2025 21:41:59.512] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Isn't It Iron Pick]
+[20sept2025 21:41:59.562] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 148 advancements
+[20sept2025 21:42:23.356] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 148 advancements
+[20sept2025 21:42:27.313] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 154 advancements
+[20sept2025 21:42:39.877] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12332, l='ServerLevel[New World]', x=286.44, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:42:39.892] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12332, l='ClientLevel', x=286.44, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:42:43.071] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12323, l='ServerLevel[New World]', x=288.70, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:42:43.079] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12323, l='ClientLevel', x=288.70, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:42:45.529] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12319, l='ServerLevel[New World]', x=290.70, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:42:45.545] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12319, l='ClientLevel', x=290.70, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:42:48.285] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12312, l='ServerLevel[New World]', x=292.47, y=63.00, z=147.32] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:42:48.298] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12312, l='ClientLevel', x=292.47, y=63.00, z=147.32] died, message: 'Toolsmith died'
+[20sept2025 21:42:51.185] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12310, l='ServerLevel[New World]', x=294.57, y=63.00, z=147.31] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:42:51.202] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12310, l='ClientLevel', x=294.57, y=63.00, z=147.31] died, message: 'Toolsmith died'
+[20sept2025 21:42:54.073] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12306, l='ServerLevel[New World]', x=296.64, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:42:54.088] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12306, l='ClientLevel', x=296.64, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:42:56.725] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12304, l='ServerLevel[New World]', x=298.47, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:42:56.743] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12304, l='ClientLevel', x=298.47, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:42:59.278] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12301, l='ServerLevel[New World]', x=300.35, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:42:59.294] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12301, l='ClientLevel', x=300.35, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:43:02.130] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12290, l='ServerLevel[New World]', x=302.59, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:43:02.142] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12290, l='ClientLevel', x=302.59, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:43:04.985] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12272, l='ServerLevel[New World]', x=304.63, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:43:05.004] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12272, l='ClientLevel', x=304.63, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:43:07.220] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12268, l='ServerLevel[New World]', x=306.53, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:43:07.228] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12268, l='ClientLevel', x=306.53, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:43:09.277] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12259, l='ServerLevel[New World]', x=308.68, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:43:09.291] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12259, l='ClientLevel', x=308.68, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:43:11.877] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12254, l='ServerLevel[New World]', x=310.63, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:43:11.891] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12254, l='ClientLevel', x=310.63, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:43:17.673] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12248, l='ServerLevel[New World]', x=314.33, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:43:17.682] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12248, l='ClientLevel', x=314.33, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:43:18.733] [Server thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12250, l='ServerLevel[New World]', x=312.70, y=63.00, z=147.30] died, message: 'Toolsmith was slain by Dev'
+[20sept2025 21:43:18.748] [Render thread/INFO] [net.minecraft.world.entity.npc.Villager/]: Villager Villager['Toolsmith'/12250, l='ClientLevel', x=312.70, y=63.00, z=147.30] died, message: 'Toolsmith died'
+[20sept2025 21:44:49.904] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Suit Up]
+[20sept2025 21:44:49.916] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Suit Up]
+[20sept2025 21:44:49.959] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 154 advancements
+[20sept2025 21:49:12.057] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Cover Me with Diamonds]
+[20sept2025 21:49:12.071] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Cover Me with Diamonds]
+[20sept2025 21:49:12.122] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 154 advancements
+[20sept2025 21:50:52.146] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[20sept2025 21:50:52.152] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20sept2025 21:50:52.164] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20sept2025 21:50:52.169] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20sept2025 21:50:53.364] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[20sept2025 21:50:53.404] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[20sept2025 21:50:53.404] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[20sept2025 21:50:53.411] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
+[20sept2025 21:50:53.447] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[20sept2025 21:50:53.447] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[20sept2025 21:50:53.448] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[20sept2025 21:50:54.060] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20sept2025 21:50:54.130] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20sept2025 21:50:54.132] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20sept2025 21:50:54.138] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[20sept2025 21:50:54.139] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[20sept2025 21:50:54.139] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[20sept2025 21:50:54.139] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

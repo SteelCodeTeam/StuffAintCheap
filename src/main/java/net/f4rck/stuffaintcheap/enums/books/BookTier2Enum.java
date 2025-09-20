@@ -1,5 +1,6 @@
 package net.f4rck.stuffaintcheap.enums.books;
 
+import net.f4rck.stuffaintcheap.enums.EnchantedBookEnum;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -8,7 +9,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
 
-public enum BookTier2Enum {
+public enum BookTier2Enum implements EnchantedBookEnum {
 
     ALL_DAMAGE_PROTECTION(Enchantments.PROTECTION, 4, 45, 3),
     FALL_PROTECTION(Enchantments.FEATHER_FALLING, 4, 45, 3),

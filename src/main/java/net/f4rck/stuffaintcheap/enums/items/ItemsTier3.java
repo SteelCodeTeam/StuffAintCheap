@@ -1,11 +1,12 @@
 package net.f4rck.stuffaintcheap.enums.items;
 
+import net.f4rck.stuffaintcheap.enums.SimpleItemEnum;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.ItemCost;
 
 
-public enum ItemsTier3 {
+public enum ItemsTier3 implements SimpleItemEnum {
     NAME_TAG(new ItemCost(Items.EMERALD, 20), new ItemStack(Items.NAME_TAG, 1),  12, 30),
     GLASS(new ItemCost(Items.EMERALD, 1), new ItemStack(Items.GLASS, 4),  16, 10),
     CLOCK(new ItemCost(Items.EMERALD, 1), new ItemStack(Items.CLOCK, 1),  12, 20),

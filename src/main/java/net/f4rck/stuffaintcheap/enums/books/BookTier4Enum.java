@@ -1,5 +1,6 @@
 package net.f4rck.stuffaintcheap.enums.books;
 
+import net.f4rck.stuffaintcheap.enums.EnchantedBookEnum;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
@@ -7,7 +8,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
 
-public enum BookTier4Enum {
+public enum BookTier4Enum implements EnchantedBookEnum {
     PROJECTILE_PROTECTION(Enchantments.PROJECTILE_PROTECTION, 4, 45, 3),
     RESPIRATION(Enchantments.RESPIRATION, 3, 30, 2),
     AQUA_AFFINITY(Enchantments.AQUA_AFFINITY, 1, 15, 1),

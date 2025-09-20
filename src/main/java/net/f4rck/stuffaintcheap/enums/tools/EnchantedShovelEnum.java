@@ -1,5 +1,6 @@
 package net.f4rck.stuffaintcheap.enums.tools;
 
+import net.f4rck.stuffaintcheap.enums.EnchantedItemEnum;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -7,7 +8,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 
 
-public enum EnchantedShovelEnum {
+public enum EnchantedShovelEnum implements EnchantedItemEnum {
     UNBREAKING_AND_EFFICIENCY(Enchantments.UNBREAKING, 2, Enchantments.EFFICIENCY, 3, 18, 1),
     UNBREAKING_AND_FORTUNE(Enchantments.UNBREAKING, 2, Enchantments.FORTUNE, 2, 20, 1),
     FORTUNE_AND_EFFICIENCY(Enchantments.FORTUNE, 2, Enchantments.EFFICIENCY, 3, 22, 1);

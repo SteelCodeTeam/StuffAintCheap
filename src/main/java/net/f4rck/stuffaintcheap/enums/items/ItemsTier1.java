@@ -1,11 +1,12 @@
 package net.f4rck.stuffaintcheap.enums.items;
 
+import net.f4rck.stuffaintcheap.enums.SimpleItemEnum;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.ItemCost;
 
 
-public enum ItemsTier1 {
+public enum ItemsTier1 implements SimpleItemEnum {
     BOOK(new ItemCost(Items.BOOK, 1), new ItemStack(Items.EMERALD, 1),  12,5),
     PAPER(new ItemCost(Items.PAPER, 24), new ItemStack(Items.EMERALD, 1),  16,5),
     INK_SAC(new ItemCost(Items.INK_SAC, 5), new ItemStack(Items.EMERALD, 1),  12,5),
