@@ -1,38 +1,38 @@
 package net.f4rck.stuffaintcheap.enums.books;
 
 import net.f4rck.stuffaintcheap.enums.EnchantedBookEnum;
-import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.EnchantedBookItem;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
+
+import java.util.function.Supplier;
+
+import static net.f4rck.stuffaintcheap.config.ModConfigValues.*;
 
 public enum BookTier2Enum implements EnchantedBookEnum {
 
-    ALL_DAMAGE_PROTECTION(Enchantments.PROTECTION, 4, 45, 3),
-    FALL_PROTECTION(Enchantments.FEATHER_FALLING, 4, 45, 3),
-    PROJECTILE_PROTECTION(Enchantments.PROJECTILE_PROTECTION, 4, 45, 3),
-    SHARPNESS(Enchantments.SHARPNESS, 4, 50, 3),
-    SMITE(Enchantments.SMITE, 4, 35, 3),
-    BANE_OF_ARTHROPODS(Enchantments.BANE_OF_ARTHROPODS, 4, 35, 3),
-    KNOCKBACK(Enchantments.KNOCKBACK, 2, 25, 2),
-    EFFICIENCY(Enchantments.EFFICIENCY, 4, 35, 3),
-    POWER(Enchantments.POWER, 4, 35, 3),
-    LOYALTY(Enchantments.LOYALTY, 3, 30, 2),
-    IMPALING(Enchantments.IMPALING, 4, 40, 3),
-    MULTISHOT(Enchantments.MULTISHOT, 1, 15, 1),
-    QUICK_CHARGE(Enchantments.QUICK_CHARGE, 3, 25, 2),
-    PIERCING(Enchantments.PIERCING, 4, 25, 3),
-    VANISHING_CURSE(Enchantments.VANISHING_CURSE, 1, 15, 1);
+    ALL_DAMAGE_PROTECTION(Enchantments.PROTECTION, 4, () -> BOOK_TIER2_ALL_DAMAGE_PROTECTION_EMERALDS.get(), () -> BOOK_TIER2_ALL_DAMAGE_PROTECTION_DIAMONDS.get()),
+    FALL_PROTECTION(Enchantments.FEATHER_FALLING, 4, () -> BOOK_TIER2_FALL_PROTECTION_EMERALDS.get(), () -> BOOK_TIER2_FALL_PROTECTION_DIAMONDS.get()),
+    PROJECTILE_PROTECTION(Enchantments.PROJECTILE_PROTECTION, 4, () -> BOOK_TIER2_PROJECTILE_PROTECTION_EMERALDS.get(), () -> BOOK_TIER2_PROJECTILE_PROTECTION_DIAMONDS.get()),
+    SHARPNESS(Enchantments.SHARPNESS, 4, () -> BOOK_TIER2_SHARPNESS_EMERALDS.get(), () -> BOOK_TIER2_SHARPNESS_DIAMONDS.get()),
+    SMITE(Enchantments.SMITE, 4, () -> BOOK_TIER2_SMITE_EMERALDS.get(), () -> BOOK_TIER2_SMITE_DIAMONDS.get()),
+    BANE_OF_ARTHROPODS(Enchantments.BANE_OF_ARTHROPODS, 4, () -> BOOK_TIER2_BANE_OF_ARTHROPODS_EMERALDS.get(), () -> BOOK_TIER2_BANE_OF_ARTHROPODS_DIAMONDS.get()),
+    KNOCKBACK(Enchantments.KNOCKBACK, 2, () -> BOOK_TIER2_KNOCKBACK_EMERALDS.get(), () -> BOOK_TIER2_KNOCKBACK_DIAMONDS.get()),
+    EFFICIENCY(Enchantments.EFFICIENCY, 4, () -> BOOK_TIER2_EFFICIENCY_EMERALDS.get(), () -> BOOK_TIER2_EFFICIENCY_DIAMONDS.get()),
+    POWER(Enchantments.POWER, 4, () -> BOOK_TIER2_POWER_EMERALDS.get(), () -> BOOK_TIER2_POWER_DIAMONDS.get()),
+    LOYALTY(Enchantments.LOYALTY, 3, () -> BOOK_TIER2_LOYALTY_EMERALDS.get(), () -> BOOK_TIER2_LOYALTY_DIAMONDS.get()),
+    IMPALING(Enchantments.IMPALING, 4, () -> BOOK_TIER2_IMPALING_EMERALDS.get(), () -> BOOK_TIER2_IMPALING_DIAMONDS.get()),
+    MULTISHOT(Enchantments.MULTISHOT, 1, () -> BOOK_TIER2_MULTISHOT_EMERALDS.get(), () -> BOOK_TIER2_MULTISHOT_DIAMONDS.get()),
+    QUICK_CHARGE(Enchantments.QUICK_CHARGE, 3, () -> BOOK_TIER2_QUICK_CHARGE_EMERALDS.get(), () -> BOOK_TIER2_QUICK_CHARGE_DIAMONDS.get()),
+    PIERCING(Enchantments.PIERCING, 4, () -> BOOK_TIER2_PIERCING_EMERALDS.get(), () -> BOOK_TIER2_PIERCING_DIAMONDS.get()),
+    VANISHING_CURSE(Enchantments.VANISHING_CURSE, 1, () -> BOOK_TIER2_VANISHING_CURSE_EMERALDS.get(), () -> BOOK_TIER2_VANISHING_CURSE_DIAMONDS.get());
 
     private final ResourceKey<Enchantment> enchantment;
     private final int level;
-    private final int emeraldsCost;
-    private final int diamondCost;
+    private final Supplier<Integer> emeraldsCost;
+    private final Supplier<Integer> diamondCost;
 
-    BookTier2Enum(ResourceKey<Enchantment> enchantment, int level, int emeraldsCost, int diamondCost) {
+    BookTier2Enum(ResourceKey<Enchantment> enchantment, int level, Supplier<Integer> emeraldsCost, Supplier<Integer> diamondCost) {
         this.enchantment = enchantment;
         this.level = level;
         this.emeraldsCost = emeraldsCost;
@@ -49,11 +49,11 @@ public enum BookTier2Enum implements EnchantedBookEnum {
     }
 
 
-    public int getEmeraldsCost() {
+    public Supplier<Integer> getEmeraldsCost() {
         return emeraldsCost;
     }
 
-    public int getDiamondCost() {
+    public Supplier<Integer> getDiamondCost() {
         return diamondCost;
     }
 

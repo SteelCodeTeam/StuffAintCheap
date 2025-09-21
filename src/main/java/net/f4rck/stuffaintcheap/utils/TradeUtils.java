@@ -5,10 +5,15 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.f4rck.stuffaintcheap.enums.EnchantedBookEnum;
 import net.f4rck.stuffaintcheap.enums.EnchantedItemEnum;
 import net.f4rck.stuffaintcheap.enums.SimpleItemEnum;
-import net.f4rck.stuffaintcheap.event.registry.GetRegistryEnchantmentUtil;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import org.slf4j.Logger;
@@ -60,17 +65,19 @@ public class TradeUtils {
         }
     }
 
-    public static VillagerTrades.ItemListing createSimpleTrade(ItemCost cost,
-                                                               net.minecraft.world.item.ItemStack result,
+    public static VillagerTrades.ItemListing createSimpleTrade(Item itemCost,
+                                                               int cost,
+                                                               Item itemResult,
+                                                               int result,
                                                                int maxUses,
                                                                int xp,
                                                                float priceMultiplier) {
-        return (pTrader, pRandom) -> new MerchantOffer(cost, result, maxUses, xp, priceMultiplier);
+        return (pTrader, pRandom) -> new MerchantOffer(new ItemCost(itemCost, cost), new ItemStack(itemResult, result), maxUses, xp, priceMultiplier);
     }
 
     public static VillagerTrades.ItemListing createDualCostTrade(ItemCost primaryCost,
                                                                  ItemCost secondaryCost,
-                                                                 net.minecraft.world.item.ItemStack result,
+                                                                 ItemStack result,
                                                                  int maxUses,
                                                                  int xp,
                                                                  float priceMultiplier) {
@@ -94,9 +101,9 @@ public class TradeUtils {
 
         for (T element : enumValues) {
             trades.get(level).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemCost(Items.EMERALD, element.getEmeraldsCost()),
-                    Optional.of(new ItemCost(Items.DIAMOND, element.getDiamondCost())),
-                    GetRegistryEnchantmentUtil.makeItemStack(
+                    new ItemCost(Items.EMERALD, element.getEmeraldsCost().get()),
+                    Optional.of(new ItemCost(Items.DIAMOND, element.getDiamondCost().get())),
+                    makeItemStack(
                             item,
                             pTrader.level().registryAccess(),
                             element.getFirstEnchantment(),
@@ -119,9 +126,9 @@ public class TradeUtils {
 
         for (T element : enumValues) {
             trades.get(level).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemCost(Items.EMERALD, element.getEmeraldsCost()),
-                    Optional.of(new ItemCost(Items.DIAMOND, element.getDiamondCost())),
-                    GetRegistryEnchantmentUtil.makeItemStack(
+                    new ItemCost(Items.EMERALD, element.getEmeraldsCost().get()),
+                    Optional.of(new ItemCost(Items.DIAMOND, element.getDiamondCost().get())),
+                    makeItemStack(
                             Items.ENCHANTED_BOOK,
                             pTrader.level().registryAccess(),
                             element.getEnchantment(),
@@ -143,11 +150,26 @@ public class TradeUtils {
         for (T itemTrade : enumValues) {
             trades.get(level).add(createSimpleTrade(
                     itemTrade.getItemCost(),
+                    itemTrade.getCost().get() != null ? itemTrade.getCost().get().getDefault() : itemTrade.getCost().get().get(),
                     itemTrade.getItemResult(),
-                    itemTrade.getMaxUses(),
-                    itemTrade.getXp(),
+                    itemTrade.getResult().get() != null ? itemTrade.getResult().get().getDefault() : itemTrade.getResult().get().get(),
+                    itemTrade.getMaxUses().get() != null ? itemTrade.getMaxUses().get().getDefault() : itemTrade.getMaxUses().get().get(),
+                    itemTrade.getXp().get() != null ? itemTrade.getXp().get().getDefault() : itemTrade.getXp().get().get(),
                     priceMultiplier));
         }
+    }
+
+    public static ItemStack makeItemStack(Item item, HolderLookup.Provider registryAccess, ResourceKey<Enchantment> enchKey1, ResourceKey<Enchantment> enchKey2, int levelOfFirstEnch, int levelOfSecondEnch) {
+        HolderLookup.RegistryLookup<Enchantment> enchRegistry = registryAccess.lookupOrThrow(Registries.ENCHANTMENT);
+        Optional<? extends Holder<Enchantment>> get1 = enchRegistry.get(enchKey1);
+        Optional<? extends Holder<Enchantment>> get2 = Optional.empty();
+        if (enchKey2 != null) {
+            get2 = enchRegistry.get(enchKey2);
+        }
+        ItemStack itemStack = new ItemStack(item, 1);
+        get1.ifPresent(holder -> itemStack.enchant(holder, levelOfFirstEnch));
+        get2.ifPresent(holder -> itemStack.enchant(holder, levelOfSecondEnch));
+        return itemStack;
     }
 
 }

@@ -2,35 +2,35 @@ package net.f4rck.stuffaintcheap.enums.books;
 
 import net.f4rck.stuffaintcheap.enums.EnchantedBookEnum;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.EnchantedBookItem;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
 
-public enum BookTier4Enum implements EnchantedBookEnum {
-    PROJECTILE_PROTECTION(Enchantments.PROJECTILE_PROTECTION, 4, 45, 3),
-    RESPIRATION(Enchantments.RESPIRATION, 3, 30, 2),
-    AQUA_AFFINITY(Enchantments.AQUA_AFFINITY, 1, 15, 1),
-    DEPTH_STRIDER(Enchantments.DEPTH_STRIDER, 3, 35, 2),
-    FROST_WALKER(Enchantments.FROST_WALKER, 2, 25, 2),
-    FIRE_ASPECT(Enchantments.FIRE_ASPECT, 2, 20, 2),
-    LOOTING(Enchantments.LOOTING, 3, 40, 3),
-    SWEEPING_EDGE(Enchantments.SWEEPING_EDGE, 3, 30, 3),
-    FORTUNE(Enchantments.FORTUNE, 3, 35, 3),
-    PUNCH(Enchantments.PUNCH, 2, 25, 1),
-    FLAME(Enchantments.FLAME, 1, 15, 1),
-    LUCK_OF_THE_SEA(Enchantments.LUCK_OF_THE_SEA, 3, 25, 1),
-    LURE(Enchantments.LURE, 3, 25, 1),
-    RIPTIDE(Enchantments.RIPTIDE, 3, 30, 2);
+import java.util.function.Supplier;
 
+import static net.f4rck.stuffaintcheap.config.ModConfigValues.*;
+
+public enum BookTier4Enum implements EnchantedBookEnum {
+    PROJECTILE_PROTECTION(Enchantments.PROJECTILE_PROTECTION, 4, () -> BOOK_TIER4_PROJECTILE_PROTECTION_EMERALDS.get(), () -> BOOK_TIER4_PROJECTILE_PROTECTION_DIAMONDS.get()),
+    RESPIRATION(Enchantments.RESPIRATION, 3, () -> BOOK_TIER4_RESPIRATION_EMERALDS.get(), () -> BOOK_TIER4_RESPIRATION_DIAMONDS.get()),
+    AQUA_AFFINITY(Enchantments.AQUA_AFFINITY, 1, () -> BOOK_TIER4_AQUA_AFFINITY_EMERALDS.get(), () -> BOOK_TIER4_AQUA_AFFINITY_DIAMONDS.get()),
+    DEPTH_STRIDER(Enchantments.DEPTH_STRIDER, 3, () -> BOOK_TIER4_DEPTH_STRIDER_EMERALDS.get(), () -> BOOK_TIER4_DEPTH_STRIDER_DIAMONDS.get()),
+    FROST_WALKER(Enchantments.FROST_WALKER, 2, () -> BOOK_TIER4_FROST_WALKER_EMERALDS.get(), () -> BOOK_TIER4_FROST_WALKER_DIAMONDS.get()),
+    FIRE_ASPECT(Enchantments.FIRE_ASPECT, 2, () -> BOOK_TIER4_FIRE_ASPECT_EMERALDS.get(), () -> BOOK_TIER4_FIRE_ASPECT_DIAMONDS.get()),
+    LOOTING(Enchantments.LOOTING, 3, () -> BOOK_TIER4_LOOTING_EMERALDS.get(), () -> BOOK_TIER4_LOOTING_DIAMONDS.get()),
+    SWEEPING_EDGE(Enchantments.SWEEPING_EDGE, 3, () -> BOOK_TIER4_SWEEPING_EDGE_EMERALDS.get(), () -> BOOK_TIER4_SWEEPING_EDGE_DIAMONDS.get()),
+    FORTUNE(Enchantments.FORTUNE, 3, () -> BOOK_TIER4_FORTUNE_EMERALDS.get(), () -> BOOK_TIER4_FORTUNE_DIAMONDS.get()),
+    PUNCH(Enchantments.PUNCH, 2, () -> BOOK_TIER4_PUNCH_EMERALDS.get(), () -> BOOK_TIER4_PUNCH_DIAMONDS.get()),
+    FLAME(Enchantments.FLAME, 1, () -> BOOK_TIER4_FLAME_EMERALDS.get(), () -> BOOK_TIER4_FLAME_DIAMONDS.get()),
+    LUCK_OF_THE_SEA(Enchantments.LUCK_OF_THE_SEA, 3, () -> BOOK_TIER4_LUCK_OF_THE_SEA_EMERALDS.get(), () -> BOOK_TIER4_LUCK_OF_THE_SEA_DIAMONDS.get()),
+    LURE(Enchantments.LURE, 3, () -> BOOK_TIER4_LURE_EMERALDS.get(), () -> BOOK_TIER4_LURE_DIAMONDS.get()),
+    RIPTIDE(Enchantments.RIPTIDE, 3, () -> BOOK_TIER4_RIPTIDE_EMERALDS.get(), () -> BOOK_TIER4_RIPTIDE_DIAMONDS.get());
 
     private final ResourceKey<Enchantment> enchantment;
     private final int level;
-    private final int emeraldsCost;
-    private final int diamondCost;
+    private final Supplier<Integer> emeraldsCost;
+    private final Supplier<Integer> diamondCost;
 
-    BookTier4Enum(ResourceKey<Enchantment> enchantment, int level, int emeraldsCost, int diamondCost) {
+    BookTier4Enum(ResourceKey<Enchantment> enchantment, int level, Supplier<Integer> emeraldsCost, Supplier<Integer> diamondCost) {
         this.enchantment = enchantment;
         this.level = level;
         this.emeraldsCost = emeraldsCost;
@@ -47,11 +47,11 @@ public enum BookTier4Enum implements EnchantedBookEnum {
     }
 
 
-    public int getEmeraldsCost() {
+    public Supplier<Integer> getEmeraldsCost() {
         return emeraldsCost;
     }
 
-    public int getDiamondCost() {
+    public Supplier<Integer> getDiamondCost() {
         return diamondCost;
     }
 

@@ -5,14 +5,10 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.f4rck.stuffaintcheap.StuffAintCheap;
 import net.f4rck.stuffaintcheap.enums.weapons.EnchantedAxeAttackEnum;
 import net.f4rck.stuffaintcheap.enums.weapons.EnchantedSwordEnum;
-import net.f4rck.stuffaintcheap.event.registry.GetRegistryEnchantmentUtil;
 import net.f4rck.stuffaintcheap.utils.TradeUtils;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.trading.ItemCost;
-import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
@@ -21,7 +17,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @EventBusSubscriber(modid = StuffAintCheap.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class WeaponSmithEvents {
@@ -44,8 +39,8 @@ public class WeaponSmithEvents {
         LOGGER.info("Processing Level 3 trades...");
         TradeUtils.clearVanillaTrades(trades, vanillaTrades, 3);
         trades.get(3).add(TradeUtils.createSimpleTrade(
-                new ItemCost(Items.DIAMOND, 1),
-                new ItemStack(Items.EMERALD, 1),
+                Items.DIAMOND, 1,
+                Items.EMERALD, 1,
                 3, 25, 0.4f));
         LOGGER.info("Added 1 custom trade to Level 3: Diamond -> Emerald");
 

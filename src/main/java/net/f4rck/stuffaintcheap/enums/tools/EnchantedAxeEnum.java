@@ -2,16 +2,17 @@ package net.f4rck.stuffaintcheap.enums.tools;
 
 import net.f4rck.stuffaintcheap.enums.EnchantedItemEnum;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 
+import java.util.function.Supplier;
+
+import static net.f4rck.stuffaintcheap.config.ModConfigValues.*;
 
 public enum EnchantedAxeEnum implements EnchantedItemEnum {
-    UNBREAKING_AND_EFFICIENCY(Enchantments.UNBREAKING, 2, Enchantments.EFFICIENCY, 3, 19, 2),
-    UNBREAKING_AND_FORTUNE(Enchantments.UNBREAKING, 2, Enchantments.FORTUNE, 2, 21, 2),
-    FORTUNE_AND_EFFICIENCY(Enchantments.FORTUNE, 2, Enchantments.EFFICIENCY, 3, 24, 2);
+    UNBREAKING_AND_EFFICIENCY(Enchantments.UNBREAKING, 2, Enchantments.EFFICIENCY, 3, () -> AXE_UNBREAKING_AND_EFFICIENCY_EMERALDS.get(), () -> AXE_UNBREAKING_AND_EFFICIENCY_DIAMONDS.get()),
+    UNBREAKING_AND_FORTUNE(Enchantments.UNBREAKING, 2, Enchantments.FORTUNE, 2, () -> AXE_UNBREAKING_AND_FORTUNE_EMERALDS.get(), () -> AXE_UNBREAKING_AND_FORTUNE_DIAMONDS.get()),
+    FORTUNE_AND_EFFICIENCY(Enchantments.FORTUNE, 2, Enchantments.EFFICIENCY, 3, () -> AXE_FORTUNE_AND_EFFICIENCY_EMERALDS.get(), () -> AXE_FORTUNE_AND_EFFICIENCY_DIAMONDS.get());
 
 
 
@@ -19,11 +20,11 @@ public enum EnchantedAxeEnum implements EnchantedItemEnum {
     private final int levelOfFirstEnchantment;
     private final ResourceKey<Enchantment> secondEnchantment;
     private final int levelOfSecondEnchantment;
-    private final int emeraldsCost;
-    private final int diamondCost;
+    private final Supplier<Integer> emeraldsCost;
+    private final Supplier<Integer> diamondCost;
 
 
-    EnchantedAxeEnum(ResourceKey<Enchantment> firstEnchantment, int levelOfFirstEnchantment, ResourceKey<Enchantment> secondEnchantment, int levelOfSecondEnchantment, int emeraldsCost, int diamondCost) {
+    EnchantedAxeEnum(ResourceKey<Enchantment> firstEnchantment, int levelOfFirstEnchantment, ResourceKey<Enchantment> secondEnchantment, int levelOfSecondEnchantment, Supplier<Integer> emeraldsCost, Supplier<Integer> diamondCost) {
         this.firstEnchantment = firstEnchantment;
         this.levelOfFirstEnchantment = levelOfFirstEnchantment;
         this.secondEnchantment = secondEnchantment;
@@ -48,11 +49,11 @@ public enum EnchantedAxeEnum implements EnchantedItemEnum {
         return levelOfSecondEnchantment;
     }
 
-    public int getEmeraldsCost() {
+    public Supplier<Integer> getEmeraldsCost() {
         return emeraldsCost;
     }
 
-    public int getDiamondCost() {
+    public Supplier<Integer> getDiamondCost() {
         return diamondCost;
     }
 }

@@ -1,9 +1,11 @@
 package net.f4rck.stuffaintcheap;
 
 import com.mojang.logging.LogUtils;
+import net.f4rck.stuffaintcheap.config.ModServerConfig;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -19,15 +21,20 @@ public class StuffAintCheap {
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public StuffAintCheap(IEventBus modEventBus) {
+    public StuffAintCheap(IEventBus modEventBus, ModContainer modContainer) {
         LOGGER.info("Starting Stuff Ain't Cheap mod.");
         NeoForge.EVENT_BUS.register(this);
         LOGGER.info("Registering Event");
+
+        LOGGER.info("Registering Config");
+        ModServerConfig.register(modContainer);
+        LOGGER.info("Registering Config Complete");
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("Starting Stuff Ain't Cheap mod for server.");
+
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

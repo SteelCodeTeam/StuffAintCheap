@@ -2,30 +2,31 @@ package net.f4rck.stuffaintcheap.enums.weapons;
 
 import net.f4rck.stuffaintcheap.enums.EnchantedItemEnum;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 
+import java.util.function.Supplier;
+
+import static net.f4rck.stuffaintcheap.config.ModConfigValues.*;
 
 public enum EnchantedAxeAttackEnum implements EnchantedItemEnum {
-    UNBREAKING_AND_SHARPNESS(Enchantments.UNBREAKING, 2, Enchantments.SHARPNESS, 3, 27, 2),
-    UNBREAKING_AND_LOOTING(Enchantments.UNBREAKING, 2, Enchantments.LOOTING, 2, 21, 2),
-    LOOTING_AND_SHARPNESS(Enchantments.LOOTING, 2, Enchantments.SHARPNESS, 3, 28, 2),
-    LOOTING_AND_SMITE(Enchantments.LOOTING, 2, Enchantments.SMITE, 3, 25, 2),
-    LOOTING_AND_BANE_OF_ARTHROPODS(Enchantments.LOOTING, 2, Enchantments.BANE_OF_ARTHROPODS, 3, 23, 2),
-    UNBREAKING_AND_SMITE(Enchantments.UNBREAKING, 2, Enchantments.SMITE, 3, 24, 2),
-    UNBREAKING_AND_BANE_OF_ARTHROPODS(Enchantments.UNBREAKING, 2, Enchantments.BANE_OF_ARTHROPODS, 3, 22, 2);
+    UNBREAKING_AND_SHARPNESS(Enchantments.UNBREAKING, 2, Enchantments.SHARPNESS, 3, () -> AXE_ATTACK_UNBREAKING_AND_SHARPNESS_EMERALDS.get(), () -> AXE_ATTACK_UNBREAKING_AND_SHARPNESS_DIAMONDS.get()),
+    UNBREAKING_AND_LOOTING(Enchantments.UNBREAKING, 2, Enchantments.LOOTING, 2, () -> AXE_ATTACK_UNBREAKING_AND_LOOTING_EMERALDS.get(), () -> AXE_ATTACK_UNBREAKING_AND_LOOTING_DIAMONDS.get()),
+    LOOTING_AND_SHARPNESS(Enchantments.LOOTING, 2, Enchantments.SHARPNESS, 3, () -> AXE_ATTACK_LOOTING_AND_SHARPNESS_EMERALDS.get(), () -> AXE_ATTACK_LOOTING_AND_SHARPNESS_DIAMONDS.get()),
+    LOOTING_AND_SMITE(Enchantments.LOOTING, 2, Enchantments.SMITE, 3, () -> AXE_ATTACK_LOOTING_AND_SMITE_EMERALDS.get(), () -> AXE_ATTACK_LOOTING_AND_SMITE_DIAMONDS.get()),
+    LOOTING_AND_BANE_OF_ARTHROPODS(Enchantments.LOOTING, 2, Enchantments.BANE_OF_ARTHROPODS, 3, () -> AXE_ATTACK_LOOTING_AND_BANE_OF_ARTHROPODS_EMERALDS.get(), () -> AXE_ATTACK_LOOTING_AND_BANE_OF_ARTHROPODS_DIAMONDS.get()),
+    UNBREAKING_AND_SMITE(Enchantments.UNBREAKING, 2, Enchantments.SMITE, 3, () -> AXE_ATTACK_UNBREAKING_AND_SMITE_EMERALDS.get(), () -> AXE_ATTACK_UNBREAKING_AND_SMITE_DIAMONDS.get()),
+    UNBREAKING_AND_BANE_OF_ARTHROPODS(Enchantments.UNBREAKING, 2, Enchantments.BANE_OF_ARTHROPODS, 3, () -> AXE_ATTACK_UNBREAKING_AND_BANE_OF_ARTHROPODS_EMERALDS.get(), () -> AXE_ATTACK_UNBREAKING_AND_BANE_OF_ARTHROPODS_DIAMONDS.get());
 
     private final ResourceKey<Enchantment> firstEnchantment;
     private final int levelOfFirstEnchantment;
     private final ResourceKey<Enchantment> secondEnchantment;
     private final int levelOfSecondEnchantment;
-    private final int emeraldsCost;
-    private final int diamondCost;
+    private final Supplier<Integer> emeraldsCost;
+    private final Supplier<Integer> diamondCost;
 
 
-    EnchantedAxeAttackEnum(ResourceKey<Enchantment> firstEnchantment, int levelOfFirstEnchantment, ResourceKey<Enchantment> secondEnchantment, int levelOfSecondEnchantment, int emeraldsCost, int diamondCost) {
+    EnchantedAxeAttackEnum(ResourceKey<Enchantment> firstEnchantment, int levelOfFirstEnchantment, ResourceKey<Enchantment> secondEnchantment, int levelOfSecondEnchantment, Supplier<Integer> emeraldsCost, Supplier<Integer> diamondCost) {
         this.firstEnchantment = firstEnchantment;
         this.levelOfFirstEnchantment = levelOfFirstEnchantment;
         this.secondEnchantment = secondEnchantment;
@@ -50,11 +51,11 @@ public enum EnchantedAxeAttackEnum implements EnchantedItemEnum {
         return levelOfSecondEnchantment;
     }
 
-    public int getEmeraldsCost() {
+    public Supplier<Integer> getEmeraldsCost() {
         return emeraldsCost;
     }
 
-    public int getDiamondCost() {
+    public Supplier<Integer> getDiamondCost() {
         return diamondCost;
     }
 }

@@ -5,24 +5,27 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 
+import java.util.function.Supplier;
+
+import static net.f4rck.stuffaintcheap.config.ModConfigValues.*;
 
 public enum EnchantedLeggingsEnum implements EnchantedItemEnum {
-    UNBREAKING_AND_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.PROTECTION, 3, 21, 5),
-    UNBREAKING_AND_FIRE_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2, 21, 5),
-    UNBREAKING_AND_PROYECTILE_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2, 18, 5),
-    UNBREAKING_AND_BLAST_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.BLAST_PROTECTION, 2, 19, 5),
-    UNBREAKING_AND_THORNS(Enchantments.UNBREAKING, 2, Enchantments.THORNS, 2, 22, 5);
+    UNBREAKING_AND_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.PROTECTION, 3, () -> LEGGINGS_UNBREAKING_AND_PROTECTION_EMERALDS.get(), () -> LEGGINGS_UNBREAKING_AND_PROTECTION_DIAMONDS.get()),
+    UNBREAKING_AND_FIRE_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.FIRE_PROTECTION, 2, () -> LEGGINGS_UNBREAKING_AND_FIRE_PROTECTION_EMERALDS.get(), () -> LEGGINGS_UNBREAKING_AND_FIRE_PROTECTION_DIAMONDS.get()),
+    UNBREAKING_AND_PROYECTILE_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.PROJECTILE_PROTECTION, 2, () -> LEGGINGS_UNBREAKING_AND_PROYECTILE_PROTECTION_EMERALDS.get(), () -> LEGGINGS_UNBREAKING_AND_PROYECTILE_PROTECTION_DIAMONDS.get()),
+    UNBREAKING_AND_BLAST_PROTECTION(Enchantments.UNBREAKING, 2, Enchantments.BLAST_PROTECTION, 2, () -> LEGGINGS_UNBREAKING_AND_BLAST_PROTECTION_EMERALDS.get(), () -> LEGGINGS_UNBREAKING_AND_BLAST_PROTECTION_DIAMONDS.get()),
+    UNBREAKING_AND_THORNS(Enchantments.UNBREAKING, 2, Enchantments.THORNS, 2, () -> LEGGINGS_UNBREAKING_AND_THORNS_EMERALDS.get(), () -> LEGGINGS_UNBREAKING_AND_THORNS_DIAMONDS.get());
 
 
     private final ResourceKey<Enchantment> firstEnchantment;
     private final int levelOfFirstEnchantment;
     private final ResourceKey<Enchantment> secondEnchantment;
     private final int levelOfSecondEnchantment;
-    private final int emeraldsCost;
-    private final int diamondCost;
+    private final Supplier<Integer> emeraldsCost;
+    private final Supplier<Integer> diamondCost;
 
 
-    EnchantedLeggingsEnum(ResourceKey<Enchantment> firstEnchantment, int levelOfFirstEnchantment, ResourceKey<Enchantment> secondEnchantment, int levelOfSecondEnchantment, int emeraldsCost, int diamondCost) {
+    EnchantedLeggingsEnum(ResourceKey<Enchantment> firstEnchantment, int levelOfFirstEnchantment, ResourceKey<Enchantment> secondEnchantment, int levelOfSecondEnchantment, Supplier<Integer> emeraldsCost, Supplier<Integer> diamondCost) {
         this.firstEnchantment = firstEnchantment;
         this.levelOfFirstEnchantment = levelOfFirstEnchantment;
         this.secondEnchantment = secondEnchantment;
@@ -47,11 +50,11 @@ public enum EnchantedLeggingsEnum implements EnchantedItemEnum {
         return levelOfSecondEnchantment;
     }
 
-    public int getEmeraldsCost() {
+    public Supplier<Integer> getEmeraldsCost() {
         return emeraldsCost;
     }
 
-    public int getDiamondCost() {
+    public Supplier<Integer> getDiamondCost() {
         return diamondCost;
     }
 
